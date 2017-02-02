@@ -22,3 +22,4 @@ $TPOPlUGINs = get_plugin_data(WPNOVAPOSHTA_PlUGIN_DIR.'/'.basename(WPNOVAPOSHTA_
 define("WPNOVAPOSHTA_PlUGIN_VERSION", $TPOPlUGINs['Version']);
 define("WPNOVAPOSHTA_PlUGIN_NAME", $TPOPlUGINs['Name']);
 
+define("WPNOVAPOSHTA_PlUGIN_DIR_LOCALIZATION", plugin_basename(WPNOVAPOSHTA_PlUGIN_DIR.'/languages/'));
