@@ -8,11 +8,14 @@
  */
 namespace includes;
 
+use includes\common\WPNovaPoshtaLoader;
+
+
 class WPNovaPoshtaPlugin
 {
     private static $instance = null;
     private function __construct() {
-
+        WPNovaPoshtaLoader::getInstance();
     }
     public static function getInstance() {
 
