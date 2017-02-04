@@ -3,7 +3,7 @@
 /*
 Plugin Name: wp-novaposhta-plugin
 Plugin URI: https://github.com/vdorogobid/wp-novaposhta-plugin
-Description: WordPress NovaPoshta plugin.
+Description: WordPress NovaPoshta plugin
 Version: 1.0
 Author: Vadym Dorogobid
 Author URI: https://www.facebook.com/vdorogobid/
