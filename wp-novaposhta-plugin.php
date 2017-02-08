@@ -7,6 +7,9 @@ Description: WordPress NovaPoshta plugin
 Version: 1.0
 Author: Vadym Dorogobid
 Author URI: https://www.facebook.com/vdorogobid/
+Text Domain: wp-novaposhta-plugin
+Domain Path: /languages/
+
 License: A "Slug" license name e.g. GPL2
     Copyright 2017  Dorogobid Vadym  
     (email: vdorogobid@gmail.com)
