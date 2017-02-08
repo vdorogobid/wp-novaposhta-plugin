@@ -8,20 +8,20 @@
 
 namespace includes\common;
 
-use includes\controllers\admin\menu\WPNovaPoshtaMainAdminMenuController;
-use includes\controllers\admin\menu\WPNovaPoshtaMainAdminSubMenuController;
-use includes\controllers\admin\menu\WPNovaPoshtaMyCommentsMenuController;
-use includes\controllers\admin\menu\WPNovaPoshtaMyDashboardMenuController;
-use includes\controllers\admin\menu\WPNovaPoshtaMyMediaMenuController;
-use includes\controllers\admin\menu\WPNovaPoshtaMyOptionsMenuController;
-use includes\controllers\admin\menu\WPNovaPoshtaMyPagesMenuController;
-use includes\controllers\admin\menu\WPNovaPoshtaMyPluginsMenuController;
-use includes\controllers\admin\menu\WPNovaPoshtaMyPostsMenuController;
-use includes\controllers\admin\menu\WPNovaPoshtaMyThemeMenuController;
-use includes\controllers\admin\menu\WPNovaPoshtaMyToolsMenuController;
-use includes\controllers\admin\menu\WPNovaPoshtaMyUsersMenuController;
-use includes\example\WPNovaPoshtaExampleAction;
-use includes\example\WPNovaPoshtaExampleFilter;
+//use includes\controllers\admin\menu\WPNovaPoshtaMainAdminMenuController;
+//use includes\controllers\admin\menu\WPNovaPoshtaMainAdminSubMenuController;
+//use includes\controllers\admin\menu\WPNovaPoshtaMyCommentsMenuController;
+//use includes\controllers\admin\menu\WPNovaPoshtaMyDashboardMenuController;
+//use includes\controllers\admin\menu\WPNovaPoshtaMyMediaMenuController;
+//use includes\controllers\admin\menu\WPNovaPoshtaMyOptionsMenuController;
+//use includes\controllers\admin\menu\WPNovaPoshtaMyPagesMenuController;
+//use includes\controllers\admin\menu\WPNovaPoshtaMyPluginsMenuController;
+//use includes\controllers\admin\menu\WPNovaPoshtaMyPostsMenuController;
+//use includes\controllers\admin\menu\WPNovaPoshtaMyThemeMenuController;
+//use includes\controllers\admin\menu\WPNovaPoshtaMyToolsMenuController;
+//use includes\controllers\admin\menu\WPNovaPoshtaMyUsersMenuController;
+//use includes\example\WPNovaPoshtaExampleAction;
+//use includes\example\WPNovaPoshtaExampleFilter;
 
 class WPNovaPoshtaLoader
 {
@@ -54,18 +54,18 @@ class WPNovaPoshtaLoader
      * Метод будет срабатывать когда вы находитесь в Админ панеле. Загрузка классов для Админ панели
      */
     public function admin(){
-        WPNovaPoshtaMainAdminMenuController::newInstance();
-        WPNovaPoshtaMainAdminSubMenuController::newInstance();
-        WPNovaPoshtaMyDashboardMenuController::newInstance();
-        WPNovaPoshtaMyPostsMenuController::newInstance();
-        WPNovaPoshtaMyMediaMenuController::newInstance();
-        WPNovaPoshtaMyPagesMenuController::newInstance();
-        WPNovaPoshtaMyCommentsMenuController::newInstance();
-        WPNovaPoshtaMyThemeMenuController::newInstance();
-        WPNovaPoshtaMyPluginsMenuController::newInstance();
-        WPNovaPoshtaMyUsersMenuController::newInstance();
-        WPNovaPoshtaMyToolsMenuController::newInstance();
-        WPNovaPoshtaMyOptionsMenuController::newInstance();
+//        WPNovaPoshtaMainAdminMenuController::newInstance();
+//        WPNovaPoshtaMainAdminSubMenuController::newInstance();
+//        WPNovaPoshtaMyDashboardMenuController::newInstance();
+//        WPNovaPoshtaMyPostsMenuController::newInstance();
+//        WPNovaPoshtaMyMediaMenuController::newInstance();
+//        WPNovaPoshtaMyPagesMenuController::newInstance();
+//        WPNovaPoshtaMyCommentsMenuController::newInstance();
+//        WPNovaPoshtaMyThemeMenuController::newInstance();
+//        WPNovaPoshtaMyPluginsMenuController::newInstance();
+//        WPNovaPoshtaMyUsersMenuController::newInstance();
+//        WPNovaPoshtaMyToolsMenuController::newInstance();
+//        WPNovaPoshtaMyOptionsMenuController::newInstance();
 
     }
 
