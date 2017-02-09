@@ -9,7 +9,7 @@
 namespace includes\controllers\admin\menu;
 
 
-abstract class WPNovaPoshtaBaseAdminMenuController implements WPNovaPoshtaIСreatorInstance
+abstract class WPNovaPoshtaBaseAdminMenuController 
 {
     public function __construct(){
         /*
