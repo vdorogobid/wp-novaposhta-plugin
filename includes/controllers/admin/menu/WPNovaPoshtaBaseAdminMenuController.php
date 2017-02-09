@@ -21,4 +21,5 @@ abstract class WPNovaPoshtaBaseAdminMenuController
 
     abstract public function action();
     abstract public function render();
+    abstract public static function newInstance();
 }
