@@ -11,7 +11,7 @@ namespace includes\common;
 use includes\controllers\admin\menu\WPNovaPoshtaMainAdminMenuController;
 use includes\controllers\admin\menu\WPNovaPoshtaMainAdminSubMenuController;
 //use includes\controllers\admin\menu\WPNovaPoshtaMyCommentsMenuController;
-//use includes\controllers\admin\menu\WPNovaPoshtaMyDashboardMenuController;
+use includes\controllers\admin\menu\WPNovaPoshtaMyDashboardMenuController;
 //use includes\controllers\admin\menu\WPNovaPoshtaMyMediaMenuController;
 //use includes\controllers\admin\menu\WPNovaPoshtaMyOptionsMenuController;
 //use includes\controllers\admin\menu\WPNovaPoshtaMyPagesMenuController;
@@ -56,7 +56,7 @@ class WPNovaPoshtaLoader
     public function admin(){
         WPNovaPoshtaMainAdminMenuController::newInstance();
         WPNovaPoshtaMainAdminSubMenuController::newInstance();
-//        WPNovaPoshtaMyDashboardMenuController::newInstance();
+        WPNovaPoshtaMyDashboardMenuController::newInstance();
 //        WPNovaPoshtaMyPostsMenuController::newInstance();
 //        WPNovaPoshtaMyMediaMenuController::newInstance();
 //        WPNovaPoshtaMyPagesMenuController::newInstance();
