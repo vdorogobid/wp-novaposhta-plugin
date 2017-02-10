@@ -16,7 +16,7 @@ use includes\controllers\admin\menu\WPNovaPoshtaMyDashboardMenuController;
 //use includes\controllers\admin\menu\WPNovaPoshtaMyOptionsMenuController;
 //use includes\controllers\admin\menu\WPNovaPoshtaMyPagesMenuController;
 //use includes\controllers\admin\menu\WPNovaPoshtaMyPluginsMenuController;
-//use includes\controllers\admin\menu\WPNovaPoshtaMyPostsMenuController;
+use includes\controllers\admin\menu\WPNovaPoshtaMyPostsMenuController;
 //use includes\controllers\admin\menu\WPNovaPoshtaMyThemeMenuController;
 //use includes\controllers\admin\menu\WPNovaPoshtaMyToolsMenuController;
 //use includes\controllers\admin\menu\WPNovaPoshtaMyUsersMenuController;
@@ -57,7 +57,7 @@ class WPNovaPoshtaLoader
         WPNovaPoshtaMainAdminMenuController::newInstance();
         WPNovaPoshtaMainAdminSubMenuController::newInstance();
         WPNovaPoshtaMyDashboardMenuController::newInstance();
-//        WPNovaPoshtaMyPostsMenuController::newInstance();
+        WPNovaPoshtaMyPostsMenuController::newInstance();
 //        WPNovaPoshtaMyMediaMenuController::newInstance();
 //        WPNovaPoshtaMyPagesMenuController::newInstance();
 //        WPNovaPoshtaMyCommentsMenuController::newInstance();
