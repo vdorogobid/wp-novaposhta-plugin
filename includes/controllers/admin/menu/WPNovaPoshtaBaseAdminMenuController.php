@@ -9,7 +9,7 @@
 namespace includes\controllers\admin\menu;
 
 
-abstract class WPNovaPoshtaBaseAdminMenuController 
+abstract class WPNovaPoshtaBaseAdminMenuController implements SingletonInterface 
 {
     public function __construct(){
         /*
@@ -21,5 +21,4 @@ abstract class WPNovaPoshtaBaseAdminMenuController
 
     abstract public function action();
     abstract public function render();
-    abstract public static function newInstance();
 }

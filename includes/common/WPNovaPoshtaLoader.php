@@ -81,6 +81,7 @@ class WPNovaPoshtaLoader
      */
     public function all(){
         WPNovaPoshtaLocalization::getInstance();
+        WPNovaPoshtaLoaderScript::getInstance();
         //$stepByStepExampleAction = StepByStepExampleAction::newInstance();
         /*$stepByStepExampleFilter = StepByStepExampleFilter::newInstance();
        $stepByStepExampleFilter->callMyFilter("Roman");
