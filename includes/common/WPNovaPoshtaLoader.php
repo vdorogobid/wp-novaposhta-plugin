@@ -54,7 +54,7 @@ class WPNovaPoshtaLoader
      * Метод будет срабатывать когда вы находитесь в Админ панеле. Загрузка классов для Админ панели
      */
     public function admin(){
-//        WPNovaPoshtaMainAdminMenuController::newInstance();
+        WPNovaPoshtaMainAdminMenuController::newInstance();
 //        WPNovaPoshtaMainAdminSubMenuController::newInstance();
 //        WPNovaPoshtaMyDashboardMenuController::newInstance();
 //        WPNovaPoshtaMyPostsMenuController::newInstance();
