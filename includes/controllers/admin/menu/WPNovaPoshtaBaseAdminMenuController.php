@@ -9,7 +9,7 @@
 namespace includes\controllers\admin\menu;
 
 
-abstract class WPNovaPoshtaBaseAdminMenuController implements SingletonInterface 
+abstract class WPNovaPoshtaBaseAdminMenuController implements StepByStepIСreatorInstance 
 {
     public function __construct(){
         /*
