@@ -17,6 +17,7 @@ use includes\controllers\admin\menu\WPNovaPoshtaMyDashboardMenuController;
 //use includes\controllers\admin\menu\WPNovaPoshtaMyPagesMenuController;
 //use includes\controllers\admin\menu\WPNovaPoshtaMyPluginsMenuController;
 use includes\controllers\admin\menu\WPNovaPoshtaMyPostsMenuController;
+use includes\controllers\site\shortcodes\WPNovaPoshtaCalendarPricesMonthShortcodeController;
 //use includes\controllers\admin\menu\WPNovaPoshtaMyThemeMenuController;
 //use includes\controllers\admin\menu\WPNovaPoshtaMyToolsMenuController;
 //use includes\controllers\admin\menu\WPNovaPoshtaMyUsersMenuController;
@@ -73,7 +74,7 @@ class WPNovaPoshtaLoader
      * Метод будет срабатывать когда вы находитесь на Сайте. Загрузка классов для Сайта
      */
     public function site(){
-
+        WPNovaPoshtaCalendarPricesMonthShortcodeController::newInstance();
     }
 
     /**
@@ -82,7 +83,7 @@ class WPNovaPoshtaLoader
     public function all(){
         WPNovaPoshtaLocalization::getInstance();
         WPNovaPoshtaLoaderScript::getInstance();
-        //$stepByStepExampleAction = StepByStepExampleAction::newInstance();
+                //$stepByStepExampleAction = StepByStepExampleAction::newInstance();
         /*$stepByStepExampleFilter = StepByStepExampleFilter::newInstance();
        $stepByStepExampleFilter->callMyFilter("Roman");
        $stepByStepExampleFilter->callMyFilterAdditionalParameter("Roman", "Softgroup", "Poltava");
