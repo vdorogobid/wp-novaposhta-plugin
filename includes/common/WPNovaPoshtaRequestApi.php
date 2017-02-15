@@ -42,7 +42,7 @@ public function getToken(){
      *                      Значение по умолчанию — true.
      * month — первый день месяца, в формате «YYYY-MM-DD».
      */
-    public function getCalendarPricesMonth($currency, $origin, $destination, $month){
+    public function getCalendarPricesMonth($currency, $origin, $destination, $month = ""){
         $requestURL = "";
         if ($currency == false || empty($currency)){
             $currency = "currency=RUB";
@@ -64,7 +64,8 @@ public function getToken(){
         } else {
             $month = "&month={$month}";
         }
-        $requestURL = self::WPNOVAPOSHTA_API_V2."/prices/month-matrix?{$currency}{$origin}{$destination}{$month}";
+        $requestURL = self::WPNOVAPOSHTA_API_V2."/prices/month-matrix?{$currency}{$origin}{$destination}{$month}".$this->getToken();
+        
         return $this->requestAPI($requestURL);
     }
     public function requestAPI($requestURL){

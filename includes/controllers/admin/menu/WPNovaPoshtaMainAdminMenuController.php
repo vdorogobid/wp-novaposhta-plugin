@@ -8,6 +8,7 @@
 
 namespace includes\controllers\admin\menu;
 
+use includes\common\WPNovaPoshtaRequestApi;
 
 class WPNovaPoshtaMainAdminMenuController extends WPNovaPoshtaBaseAdminMenuController
 {
@@ -44,9 +45,10 @@ class WPNovaPoshtaMainAdminMenuController extends WPNovaPoshtaBaseAdminMenuContr
     {
         // TODO: Implement render() method.
         _e("Hello world wpnovaposhta", WPNOVAPOSHTA_PlUGIN_TEXTDOMAIN);
+        $reuestAPI = WPNovaPoshtaRequestApi::getInstance();
+        var_dump($reuestAPI->getCalendarPricesMonth('RUB', 'MOW', 'LED'));
     }
-
-    
+  
     public static function newInstance()
     {
         // TODO: Implement newInstance() method.
