@@ -3,6 +3,6 @@
  */
 jQuery(function($) {
     $(document).ready(function(){
-        alert("Hello world. jQuery");
+        alert("Спасибо за установку нашого плагина. Команда WP Nova Poshta plugin");
     });
 });
