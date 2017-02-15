@@ -46,6 +46,7 @@ class WPNovaPoshtaMainAdminMenuController extends WPNovaPoshtaBaseAdminMenuContr
         _e("Hello world wpnovaposhta", WPNOVAPOSHTA_PlUGIN_TEXTDOMAIN);
     }
 
+    
     public static function newInstance()
     {
         // TODO: Implement newInstance() method.
