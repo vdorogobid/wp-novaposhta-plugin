@@ -12,6 +12,8 @@ namespace includes\common;
 class NPNovaPoshtaRequestApi
 {
     const WPNOVAPOSHTA_API_V2 = "http://api.travelpayouts.com/v2";
+    const WPNOVAPOSHTA_TOKEN = "b2f8bef81735323aecb33e285da8e694";
+    const WPNOVAPOSHTA_MARKER = "17942";
     private static $instance = null;
     private function __construct(){
     
