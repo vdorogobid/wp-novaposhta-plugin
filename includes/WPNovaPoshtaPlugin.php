@@ -51,6 +51,8 @@ class WPNovaPoshtaPlugin
     {
         // debug.log
         error_log('plugin '.WPNOVAPOSHTA_PlUGIN_NAME.' deactivation');
+        delete_option(WPNOVAPOSHTA_PlUGIN_OPTION_NAME);
+        delete_option(WPNOVAPOSHTA_PlUGIN_OPTION_VERSION);
     }
 
 }
