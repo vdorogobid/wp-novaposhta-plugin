@@ -10,11 +10,11 @@ namespace includes\controllers\site\shortcodes;
 
 
 use includes\common\WPNovaPoshtaRequestApi;
-use includes\controllers\admin\menu\WPNovaPoshtaIСreatorInstance;
+use includes\controllers\admin\menu\WPNovaPoshtaICreatorInstance;
 use includes\models\site\WPNovaPoshtaCalendarPricesMonthShortcodeModel;
 
 class WPNovaPoshtaCalendarPricesMonthShortcodeController extends WPNovaPoshtaShortcodesController
-    implements WPNovaPoshtaIСreatorInstance
+    implements WPNovaPoshtaICreatorInstance
 {
     public $model;
     public function __construct() {

@@ -9,7 +9,7 @@
 namespace includes\controllers\admin\menu;
 
 
-interface WPNovaPoshtaIСreatorInstance
+interface WPNovaPoshtaICreatorInstance
 {
     public static function newInstance();
 }
