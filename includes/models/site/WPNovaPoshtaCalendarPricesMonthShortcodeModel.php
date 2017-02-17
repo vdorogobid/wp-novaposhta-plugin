@@ -12,7 +12,7 @@ namespace includes\models\site;
 use includes\common\WPNovaPoshtaRequestApi;
 use includes\controllers\admin\menu\WPNovaPoshtaICreatorInstance;
 
-class SWPNovaPoshtaCalendarPricesMonthShortcodeModel implements WPNovaPoshtaICreatorInstance
+class WPNovaPoshtaCalendarPricesMonthShortcodeModel implements WPNovaPoshtaICreatorInstance
 {
 
     public function __construct() {
