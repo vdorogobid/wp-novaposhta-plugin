@@ -31,7 +31,7 @@ class WPNovaPoshtaCalendarPricesMonthShortcodeController extends WPNovaPoshtaSho
         /*
          * Добавляем шорткод [step_by_step_calendar_price_month]
          */
-        add_shortcode( 'np_nova_poshta_calendar_price_month', array(&$this, 'action'));
+        add_shortcode( 'wp_nova_poshta_calendar_price_month', array(&$this, 'action'));
     }
 
     /**
