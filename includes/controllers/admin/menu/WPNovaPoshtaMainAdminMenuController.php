@@ -14,12 +14,6 @@ use includes\models\admin\menu\WPNovaPoshtaMainAdminMenuModel;
 class WPNovaPoshtaMainAdminMenuController extends WPNovaPoshtaBaseAdminMenuController
 {
 
-    public $model;
-    public function __construct(){
-        parent::__construct();
-        $this->model = WPNovaPoshtaMainAdminMenuModel::newInstance();
-    }
-    
     public function action()
     {
         // TODO: Implement action() method.
@@ -51,10 +45,10 @@ class WPNovaPoshtaMainAdminMenuController extends WPNovaPoshtaBaseAdminMenuContr
     public function render()
     {
         // TODO: Implement render() method.
-//        _e("Hello world wpnovaposhta", WPNOVAPOSHTA_PlUGIN_TEXTDOMAIN);
-//        $reuestAPI = WPNovaPoshtaRequestApi::getInstance();
-//        var_dump($reuestAPI->getCalendarPricesMonth('RUB', 'MOW', 'LED'));
-    $pathView = WPNOVAPOSHTA_PlUGIN_DIR."/includes/views/admin/menu/WPNovaPoshtaMainAdminMenu.view.php";
+        /*_e("Hello world wpnovaposhta", WPNOVAPOSHTA_PlUGIN_TEXTDOMAIN);
+        $reuestAPI = WPNovaPoshtaRequestApi::getInstance();
+        var_dump($reuestAPI->getCalendarPricesMonth('RUB', 'MOW', 'LED'));*/
+        $pathView = WPNOVAPOSHTA_PlUGIN_DIR."/includes/views/admin/menu/WPNovaPoshtaMainAdminMenu.view.php";
         $this->loadView($pathView);
     }
   

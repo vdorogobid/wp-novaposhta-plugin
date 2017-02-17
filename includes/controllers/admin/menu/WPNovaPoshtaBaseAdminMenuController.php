@@ -21,7 +21,6 @@ abstract class WPNovaPoshtaBaseAdminMenuController implements WPNovaPoshtaICreat
 
     abstract public function action();
     abstract public function render();
-
   /**
      * Метод подключения view
      * @param $view
@@ -45,5 +44,4 @@ abstract class WPNovaPoshtaBaseAdminMenuController implements WPNovaPoshtaICreat
             wp_die(sprintf(__('(View %s not found)', WPNOVAPOSHTA_PlUGIN_TEXTDOMAIN), $view));
         }
     }
-
 }

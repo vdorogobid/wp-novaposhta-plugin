@@ -32,9 +32,9 @@ class WPNovaPoshtaPlugin
      /**
       * Если не созданные настройки установить по умолчанию
       */
-    public function setDefaultOptions(){
+     public function setDefaultOptions(){
          if( ! get_option(WPNOVAPOSHTA_PlUGIN_OPTION_NAME) ){
-            update_option( WPNOVAPOSHTA_PlUGIN_OPTION_NAME, WPNovaPoshtaDefaultOption::getDefaultOptions() );
+             update_option( WPNOVAPOSHTA_PlUGIN_OPTION_NAME, WPNovaPoshtaDefaultOption::getDefaultOptions() );
          }
          if( ! get_option(WPNOVAPOSHTA_PlUGIN_OPTION_VERSION) ){
              update_option(WPNOVAPOSHTA_PlUGIN_OPTION_VERSION, WPNOVAPOSHTA_PlUGIN_VERSION);
@@ -51,8 +51,8 @@ class WPNovaPoshtaPlugin
     {
         // debug.log
         error_log('plugin '.WPNOVAPOSHTA_PlUGIN_NAME.' deactivation');
-        delete_option(WPNOVAPOSHTA_PlUGIN_OPTION_NAME);
-        delete_option(WPNOVAPOSHTA_PlUGIN_OPTION_VERSION);
+         delete_option(WPNOVAPOSHTA_PlUGIN_OPTION_NAME);
+         delete_option(WPNOVAPOSHTA_PlUGIN_OPTION_VERSION);
     }
 
 }
