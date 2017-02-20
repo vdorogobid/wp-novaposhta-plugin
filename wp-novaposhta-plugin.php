@@ -36,4 +36,4 @@ require_once WPNOVAPOSHTA_PlUGIN_DIR.'/includes/WPNovaPoshtaPlugin.php';
 register_activation_hook( __FILE__, array('includes\WPNovaPoshtaPlugin' ,  'activation' ) );
 register_deactivation_hook( __FILE__, array('includes\WPNovaPoshtaPlugin' ,  'deactivation' ) );
 
-error_log(WPNOVAPOSHTA_PlUGIN_URL_IMG);
+//error_log(WPNOVAPOSHTA_PlUGIN_URL_IMG);
