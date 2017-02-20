@@ -37,18 +37,18 @@ class WPNovaPoshtaMainAdminMenuModel implements WPNovaPoshtaICreatorInstance
         // add_settings_field( $id, $title, $callback, $page, $section, $args );
         // Добавление полей опций
         add_settings_field(
-            'wp-nova-poshta_token_field_id',
+            'wp_nova_poshta_token_field_id',
             __('Token', WPNOVAPOSHTA_PlUGIN_TEXTDOMAIN),
             array(&$this, 'tokenField'),
             'wp-nova-poshta-plugin',
-            'wp-nova-poshta_account_section_id'
+            'wp_nova_poshta_account_section_id'
         );
         add_settings_field(
-            'wp-nova-poshta_marker_field_id',
+            'wp_nova_poshta_marker_field_id',
             __('Marker', WPNOVAPOSHTA_PlUGIN_TEXTDOMAIN),
             array(&$this, 'markerField'),
             'wp-nova-poshta-plugin',
-            'wp-nova-poshta_account_section_id'
+            'wp_nova_poshta_account_section_id'
         );
 
     }

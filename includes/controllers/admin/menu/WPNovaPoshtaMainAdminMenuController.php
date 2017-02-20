@@ -13,7 +13,11 @@ use includes\models\admin\menu\WPNovaPoshtaMainAdminMenuModel;
 
 class WPNovaPoshtaMainAdminMenuController extends WPNovaPoshtaBaseAdminMenuController
 {
-
+    public $model;
+    public function __construct(){
+        parent::__construct();
+        $this->model = WPNovaPoshtaMainAdminMenuModel::newInstance();
+    }
     public function action()
     {
         // TODO: Implement action() method.
