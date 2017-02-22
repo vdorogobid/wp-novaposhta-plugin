@@ -8,6 +8,7 @@
 
 namespace includes\common;
 
+use includes\controllers\admin\menu\WPNovaPoshtaGuestBookSubMenuController;
 use includes\controllers\admin\menu\WPNovaPoshtaMainAdminMenuController;
 use includes\controllers\admin\menu\WPNovaPoshtaMainAdminSubMenuController;
 //use includes\controllers\admin\menu\WPNovaPoshtaMyCommentsMenuController;
@@ -59,6 +60,7 @@ class WPNovaPoshtaLoader
         WPNovaPoshtaMainAdminSubMenuController::newInstance();
         WPNovaPoshtaMyDashboardMenuController::newInstance();
         WPNovaPoshtaMyPostsMenuController::newInstance();
+        WPNovaPoshtaGuestBookSubMenuController::newInstance();
 //        WPNovaPoshtaMyMediaMenuController::newInstance();
 //        WPNovaPoshtaMyPagesMenuController::newInstance();
 //        WPNovaPoshtaMyCommentsMenuController::newInstance();

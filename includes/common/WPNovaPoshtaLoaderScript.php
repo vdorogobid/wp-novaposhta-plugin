@@ -66,7 +66,7 @@ class WPNovaPoshtaLoaderScript
          * Добавляет скрипт, только если он еще не был добавлен и другие скрипты от которых он зависит зарегистрированы.
          * Зависимые скрипты добавляются автоматически.
          */
-        wp_enqueue_script(WPNOVAPOSHTA_PlUGIN_SLUG.'-AdminMain');
+//        wp_enqueue_script(WPNOVAPOSHTA_PlUGIN_SLUG.'-AdminMain');
 
 
 

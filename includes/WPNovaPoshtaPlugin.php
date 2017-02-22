@@ -10,6 +10,7 @@ namespace includes;
 
 use includes\common\WPNovaPoshtaDefaultOption;
 use includes\common\WPNovaPoshtaLoader;
+use includes\models\admin\menu\WPNovaPoshtaGuestBookSubMenuModel;
 
 
 class WPNovaPoshtaPlugin
@@ -45,6 +46,8 @@ class WPNovaPoshtaPlugin
     {
         // debug.log
         error_log('plugin '.WPNOVAPOSHTA_PlUGIN_NAME.' activation');
+        //Создание таблицы Гостевой книги
+        WPNovaPoshtaGuestBookSubMenuModel::createTable();
     }
 
     static public function deactivation()
