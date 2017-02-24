@@ -65,6 +65,7 @@ class WPNovaPoshtaLoader
         WPNovaPoshtaMyDashboardMenuController::newInstance();
         WPNovaPoshtaMyPostsMenuController::newInstance();
         WPNovaPoshtaGuestBookSubMenuController::newInstance();
+       //подключаем виджет гостевой книги в админке
         WPNovaPoshtaGuestBookDashboardWidget::newInstance();
 //        WPNovaPoshtaMyMediaMenuController::newInstance();
 //        WPNovaPoshtaMyPagesMenuController::newInstance();
