@@ -119,6 +119,11 @@ class WPNovaPoshtaLoaderScript
          * Зависимые скрипты добавляются автоматически.
          */
         wp_enqueue_script(WPNOVAPOSHTA_PlUGIN_SLUG.'-Main');
+    // Добавим ajaxurl переменую до скрипта будем использовать функцию
+        // wp_add_inline_script( $handle, $data, $position );
+        $data = 'var ajaxurl = "'.WPNOVAPOSHTA_PlUGIN_AJAX_URL.'";';
+        wp_add_inline_script( WPNOVAPOSHTA_PlUGIN_SLUG.'-Main', $data, 'before' );
+    
     }
     public function loadHeadScriptSite(){}
 
