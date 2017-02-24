@@ -8,6 +8,7 @@
 
 namespace includes\common;
 
+use includes\widgets\WPNovaPoshtaGuestBookDashboardWidget;
 use includes\ajax\WPNovaPoshtaGuestBookAjaxHandler;
 use includes\controllers\admin\menu\WPNovaPoshtaGuestBookSubMenuController;
 use includes\controllers\admin\menu\WPNovaPoshtaMainAdminMenuController;
@@ -58,11 +59,13 @@ class WPNovaPoshtaLoader
      * Метод будет срабатывать когда вы находитесь в Админ панеле. Загрузка классов для Админ панели
      */
     public function admin(){
+        
         WPNovaPoshtaMainAdminMenuController::newInstance();
         WPNovaPoshtaMainAdminSubMenuController::newInstance();
         WPNovaPoshtaMyDashboardMenuController::newInstance();
         WPNovaPoshtaMyPostsMenuController::newInstance();
         WPNovaPoshtaGuestBookSubMenuController::newInstance();
+        WPNovaPoshtaGuestBookDashboardWidget::newInstance();
 //        WPNovaPoshtaMyMediaMenuController::newInstance();
 //        WPNovaPoshtaMyPagesMenuController::newInstance();
 //        WPNovaPoshtaMyCommentsMenuController::newInstance();
