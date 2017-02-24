@@ -93,7 +93,7 @@ class WPNovaPoshtaLoaderScript
     public function loadHeadScriptAdmin(){
         ?>
             <script type="text/javascript">
-                var WPNvaPoshtaAjaxUrl;
+                var WPNovaPoshtaAjaxUrl;
                 WPNovaPoshtaAjaxUrlAjaxUrl  = '<?php echo WPNOVAPOSHTA_PlUGIN_AJAX_URL; ?>';
             </script>
         <?php
@@ -101,6 +101,24 @@ class WPNovaPoshtaLoaderScript
 
     public function loadScriptSite($hook){
         //Подключение скриптов для frontend
+    
+     //Подключение скриптов для frontend
+        //$version = STEPBYSTEP_PlUGIN_VERSION;
+        $version = null;
+        wp_register_script(
+            WPNOVAPOSHTA_PlUGIN_SLUG.'-Main', //$handle
+            WPNOVAPOSHTA_PlUGIN_URL.'assets/site/js/WPNovaPoshtaMain.js', //$src
+            array(
+                'jquery'
+            ), //$deps
+            $version, //$ver
+            true //$$in_footer
+        );
+        /**
+         * Добавляет скрипт, только если он еще не был добавлен и другие скрипты от которых он зависит зарегистрированы.
+         * Зависимые скрипты добавляются автоматически.
+         */
+        wp_enqueue_script(WPNOVAPOSHTA_PlUGIN_SLUG.'-Main');
     }
     public function loadHeadScriptSite(){}
 
