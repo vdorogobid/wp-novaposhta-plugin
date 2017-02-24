@@ -19,6 +19,7 @@ use includes\controllers\admin\menu\WPNovaPoshtaMyDashboardMenuController;
 //use includes\controllers\admin\menu\WPNovaPoshtaMyPluginsMenuController;
 use includes\controllers\admin\menu\WPNovaPoshtaMyPostsMenuController;
 use includes\controllers\site\shortcodes\WPNovaPoshtaCalendarPricesMonthShortcodeController;
+use includes\controllers\site\shortcodes\WPNovaPoshtaGuestBookShortcodesController;
 //use includes\controllers\admin\menu\WPNovaPoshtaMyThemeMenuController;
 //use includes\controllers\admin\menu\WPNovaPoshtaMyToolsMenuController;
 //use includes\controllers\admin\menu\WPNovaPoshtaMyUsersMenuController;
@@ -77,8 +78,11 @@ class WPNovaPoshtaLoader
      */
     public function site(){
         WPNovaPoshtaCalendarPricesMonthShortcodeController::newInstance();
+    // Шорткод для формы гостевой книги
+        StepByStepGuestBookShortcodesController::newInstance();
     }
 
+     
     /**
      * Метод будет срабатывать везде. Загрузка классов для Админ панеле и Сайта
      */
