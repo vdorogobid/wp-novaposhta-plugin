@@ -8,6 +8,7 @@
 
 namespace includes\common;
 
+use includes\ajax\WPNovaPoshtaGuestBookAjaxHandler;
 use includes\controllers\admin\menu\WPNovaPoshtaGuestBookSubMenuController;
 use includes\controllers\admin\menu\WPNovaPoshtaMainAdminMenuController;
 use includes\controllers\admin\menu\WPNovaPoshtaMainAdminSubMenuController;
