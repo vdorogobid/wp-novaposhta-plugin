@@ -35,7 +35,7 @@ class WPNovaPoshtaGuestBookDashboardWidget implements WPNovaPoshtaICreatorInstan
         // Продвинутое использование: добавление виджета в боковой столбец
         add_meta_box(
             'wp_nova_poshta_guest_book_dashboard_widget_new',
-            __('Guest book new', WPNOVAPOSHTA_PlUGIN_TEXTDOMAIN),
+            __('WP Nova Poshta Guest book new', WPNOVAPOSHTA_PlUGIN_TEXTDOMAIN),
             array( &$this, 'renderDashboardWidget' ),
             'dashboard',
             'side',
@@ -44,7 +44,7 @@ class WPNovaPoshtaGuestBookDashboardWidget implements WPNovaPoshtaICreatorInstan
 
         wp_add_dashboard_widget(
             'wp_nova_poshta_guest_book_dashboard_widget',         // Идентификатор виджета.
-            __('Guest book', WPNOVAPOSHTA_PlUGIN_TEXTDOMAIN),           // Заголовок виджета.
+            __('WP Nova Poshta Guest book', WPNOVAPOSHTA_PlUGIN_TEXTDOMAIN),           // Заголовок виджета.
             array( &$this, 'renderDashboardWidget'  ) // Функция отображения.
         );
 
