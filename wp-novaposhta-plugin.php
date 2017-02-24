@@ -32,6 +32,8 @@ require_once plugin_dir_path(__FILE__) . '/config-path.php';
 require_once WPNOVAPOSHTA_PlUGIN_DIR.'/includes/common/WPNovaPoshtaAutoload.php';
 require_once WPNOVAPOSHTA_PlUGIN_DIR.'/includes/WPNovaPoshtaPlugin.php';
 
+//Регистрация плагина
+add_action('widgets_init', create_function('', 'return register_widget("includes\widgets\WPNovaPoshtaGuestBookWidget");'));
 
 register_activation_hook( __FILE__, array('includes\WPNovaPoshtaPlugin' ,  'activation' ) );
 register_deactivation_hook( __FILE__, array('includes\WPNovaPoshtaPlugin' ,  'deactivation' ) );
