@@ -80,7 +80,7 @@ class WPNovaPoshtaLoader
     public function site(){
         WPNovaPoshtaCalendarPricesMonthShortcodeController::newInstance();
     // Шорткод для формы гостевой книги
-        StepByStepGuestBookShortcodesController::newInstance();
+        WPNovaPoshtaGuestBookShortcodesController::newInstance();
     }
 
      
