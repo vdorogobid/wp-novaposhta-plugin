@@ -158,7 +158,7 @@ class BookPostType
 
         // определяем заголовки для 'writer'
         $labels = array(
-            'name' => _x( 'Writers', 'taxonomy general name' ),
+            'name' => _x( 'Писатели', 'taxonomy general name' ),
             'singular_name' => _x( 'Писатели', 'taxonomy singular name' ),
             'search_items' =>  __( 'Поиск писателей' ),
             'popular_items' => __( 'Популярные писатели' ),
@@ -182,6 +182,35 @@ class BookPostType
             'show_ui' => true,
             'query_var' => true,
             'rewrite' => array( 'slug' => 'writer' ),
+        ));
+        
+        
+         // определяем заголовки для 'publishing_house'
+        $labels = array(
+            'name' => _x( 'Издательства', 'taxonomy general name' ),
+            'singular_name' => _x( 'Издательства', 'taxonomy singular name' ),
+            'search_items' =>  __( 'Поиск издательств' ),
+            'popular_items' => __( 'Популярные издательства' ),
+            'all_items' => __( 'Все издательства' ),
+            'parent_item' => null,
+            'parent_item_colon' => null,
+            'edit_item' => __( 'Редактировать издательство' ),
+            'update_item' => __( 'Обновить издательство' ),
+            'add_new_item' => __( 'Добавить новое издательство' ),
+            'new_item_name' => __( 'Название нового издательства' ),
+            'separate_items_with_commas' => __( 'Разделить издательства комой' ),
+            'add_or_remove_items' => __( 'Добавить или удалить издательство' ),
+            'choose_from_most_used' => __( 'Выбрать с наиболее часто используемых издательств' ),
+            'menu_name' => __( 'Издательства' ),
+        );
+
+        // Добавляем НЕ древовидную таксономию 'publishing_house' (как метки)
+        register_taxonomy('publishing_house', 'book',array(
+            'hierarchical' => false,
+            'labels' => $labels,
+            'show_ui' => true,
+            'query_var' => true,
+            'rewrite' => array( 'slug' => 'publishing_house' ),
         ));
 
     }
