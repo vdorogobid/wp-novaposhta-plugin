@@ -32,6 +32,13 @@ class BookPostType
 
         // включаем обновление полей при сохранении
         add_action('save_post', array( &$this, 'priceExtraFieldsUpdate' ), 0);
+         
+        
+        // подключаем функцию активации мета блока (my_extra_fields)
+        add_action('add_meta_boxes', array( &$this, 'pageExtraFields' ), 1);
+
+        // включаем обновление полей при сохранении
+        add_action('save_post', array( &$this, 'pageExtraFieldsUpdate' ), 0);
 
     }
 
@@ -152,20 +159,20 @@ class BookPostType
         // определяем заголовки для 'writer'
         $labels = array(
             'name' => _x( 'Writers', 'taxonomy general name' ),
-            'singular_name' => _x( 'Writer', 'taxonomy singular name' ),
-            'search_items' =>  __( 'Search Writers' ),
-            'popular_items' => __( 'Popular Writers' ),
-            'all_items' => __( 'All Writers' ),
+            'singular_name' => _x( 'Писатели', 'taxonomy singular name' ),
+            'search_items' =>  __( 'Поиск писателей' ),
+            'popular_items' => __( 'Популярные писатели' ),
+            'all_items' => __( 'Все писатели' ),
             'parent_item' => null,
             'parent_item_colon' => null,
-            'edit_item' => __( 'Edit Writer' ),
-            'update_item' => __( 'Update Writer' ),
-            'add_new_item' => __( 'Add New Writer' ),
-            'new_item_name' => __( 'New Writer Name' ),
-            'separate_items_with_commas' => __( 'Separate writers with commas' ),
-            'add_or_remove_items' => __( 'Add or remove writers' ),
-            'choose_from_most_used' => __( 'Choose from the most used writers' ),
-            'menu_name' => __( 'Writers' ),
+            'edit_item' => __( 'Редактировать писателя' ),
+            'update_item' => __( 'Обновить писателя' ),
+            'add_new_item' => __( 'Добавить нового писателя' ),
+            'new_item_name' => __( 'Имя нового писателя' ),
+            'separate_items_with_commas' => __( 'Разделить писателей комой' ),
+            'add_or_remove_items' => __( 'Добавить или удалить писателя' ),
+            'choose_from_most_used' => __( 'Выбрать с наиболее часто используемых писателей' ),
+            'menu_name' => __( 'Писатели' ),
         );
 
         // Добавляем НЕ древовидную таксономию 'writer' (как метки)
@@ -189,6 +196,19 @@ class BookPostType
             'high' // Приоритет блока для показа выше или ниже остальных блоков:
         );
     }
+    
+     // Создадим новый мета блок для постов
+    public function pageExtraFields(){
+        add_meta_box(
+            'page_extra_fields', // id атрибут HTML тега, контейнера блока.
+            'Количество страниц', // Заголовок/название блока. Виден пользователям.
+            array( &$this, 'renderPageExtraFields' ),  //Функция, которая выводит на экран HTML содержание блока
+            'book', // Название экрана для которого добавляется блок.
+            'normal', // Место где должен показываться блок
+            'high' // Приоритет блока для показа выше или ниже остальных блоков:
+        );
+    }
+    
     // Заполним этот блок полями html формы.
     // Делается это через, указанную в add_meta_box() функцию renderPriceExtraFields(). Именно она отвечает за содержание мета блока:
     //Функция, которая выводит на экран HTML содержание блока
@@ -197,12 +217,23 @@ class BookPostType
         <p>
             <label>
                 <input type="number" name="price_extra[price]" value="<?php echo get_post_meta($post->ID, 'price', 1); ?>" />
-                Стоимость
+                грн
             </label>
         </p>
         <?php
     }
 
+     public function renderPageExtraFields($post){
+        ?>
+        <p>
+            <label>
+                <input type="number" name="page_extra[page]" value="<?php echo get_post_meta($post->ID, 'page', 1); ?>" />
+                страниц
+            </label>
+        </p>
+        <?php
+    }
+    
     /*
      * Сохраняем данные
      * На этом этапе, мы уже создали блок произвольных полей, теперь нужно обработать данные полей при сохранении поста.
@@ -217,6 +248,24 @@ class BookPostType
         // Все ОК! Теперь, нужно сохранить/удалить данные
         $priceExtra = array_map('trim', $_POST['price_extra']); // чистим все данные от пробелов по краям
         foreach( $priceExtra as $key=>$value ){
+            if( empty($value) ){
+                delete_post_meta($post_id, $key); // удаляем поле если значение пустое
+                continue;
+            }
+
+            update_post_meta($post_id, $key, $value); // add_post_meta() работает автоматически
+        }
+        return $post_id;
+    }
+    
+      public function pageExtraFieldsUpdate($post_id ){
+        if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE  ) return false; // выходим если это автосохранение
+
+        if( !isset($_POST['page_extra']) ) return false; // выходим если данных нет
+
+        // Все ОК! Теперь, нужно сохранить/удалить данные
+        $pageExtra = array_map('trim', $_POST['page_extra']); // чистим все данные от пробелов по краям
+        foreach( $pageExtra as $key=>$value ){
             if( empty($value) ){
                 delete_post_meta($post_id, $key); // удаляем поле если значение пустое
                 continue;
