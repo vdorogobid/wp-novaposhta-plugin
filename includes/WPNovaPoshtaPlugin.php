@@ -10,6 +10,7 @@ namespace includes;
 
 use includes\common\WPNovaPoshtaDefaultOption;
 use includes\common\WPNovaPoshtaLoader;
+use includes\custom_post_type\BookPostType;
 use includes\models\admin\menu\WPNovaPoshtaGuestBookSubMenuModel;
 
 
@@ -19,7 +20,13 @@ class WPNovaPoshtaPlugin
     private function __construct() {
         WPNovaPoshtaLoader::getInstance();
         add_action('plugins_loaded', array(&$this, 'setDefaultOptions'));
+    
+      // Создаем Custom Post Type Book
+        new BookPostType();
+    
     }
+    
+    
     public static function getInstance() {
 
         if ( null == self::$instance ) {
