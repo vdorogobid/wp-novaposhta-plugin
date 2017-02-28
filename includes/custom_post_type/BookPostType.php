@@ -73,7 +73,8 @@ class BookPostType
             'hierarchical'       => false,
             'menu_position'      => null,
             'supports'           => array('title','editor','author','thumbnail','excerpt','comments'),
-            'taxonomies'          => array( 'genre', 'writer' ),
+            'taxonomies'          => array( 'genre', 'writer', 'publishing_house' ),
+            'menu_icon'           => 'dashicons-book-alt',
         ) );
 
 
